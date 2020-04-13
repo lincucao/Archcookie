@@ -1,0 +1,67 @@
+
+/*icon-font声明*/
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/iconfont.woff2') format('woff2'),
+    url('../font/iconfont.woff') format('woff'),
+    url('../font/iconfont.ttf') format('truetype'),
+    url('../font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/*menu样式*/
+.menu {
+    width: 200px;
+    height: 100vh;
+    background: #ECECEC;
+    /*position: fixed;*/
+}
+/*menu-header */
+.menu-header {
+    width: 100%;
+    height: 64px;
+    border: 1px solid pink;
+    line-height: 100%;
+}
+.menu-header img{
+    display: inline-block;
+    width: 25px;
+    padding: 10px 10px 0 30px;
+    float: left;
+}
+.menu-header span {
+float: left;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/*menu-classify*/
+.menu-nav {
+}
+.menu-nav li {
+    height: 50px;
+    line-height: 50px;
+}
+.menu-nav li span {
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+.siderbar-bottom {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.container{
+    width: 100%;
+}
+.header {
+    border: 2px solid blue;
+}
