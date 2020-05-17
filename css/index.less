@@ -84,12 +84,22 @@ a:focus {
 }
 
 //内容样式
+@media (max-width: 768px) {
+    .sidenav {
+        display: none;
+    }
+    .main-content {
+        padding-left: 0 !important;
+    }
+}
 .sidenav {
     width: 240px;
     background: @baseColor;
     color: @sbColor;
     position: fixed;
     height: 100vh;
+    
+    
 
     // overflow: auto;
     // padding-top: 70px;
@@ -171,7 +181,7 @@ a:focus {
 
 // main content 
 
-.mian-content {
+.main-content {
     padding-left: 240px;
     padding-right: 0;
 

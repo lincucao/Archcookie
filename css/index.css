@@ -62,6 +62,14 @@ a:focus {
   text-decoration: none;
   transition: all 0.3s;
 }
+@media (max-width: 768px) {
+  .sidenav {
+    display: none;
+  }
+  .main-content {
+    padding-left: 0 !important;
+  }
+}
 .sidenav {
   width: 240px;
   background: #333a45;
@@ -117,23 +125,23 @@ a:focus {
   margin: 0 auto;
   margin-bottom: 10px;
 }
-.mian-content {
+.main-content {
   padding-left: 240px;
   padding-right: 0;
 }
-.mian-content .nav {
+.main-content .nav {
   box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
   height: 70px;
 }
-.mian-content .nav .nav-link {
+.main-content .nav .nav-link {
   padding: 0 1rem;
 }
-.mian-content .nav li span {
+.main-content .nav li span {
   display: inline-block;
   font-size: 22px;
   line-height: 70px;
 }
-.mian-content .main .panel {
+.main-content .main .panel {
   margin-bottom: 20px;
   margin: 20px auto;
   max-width: 1200px;
@@ -142,47 +150,47 @@ a:focus {
   border-radius: 3px;
   box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
 }
-.mian-content .main .panel .l-title {
+.main-content .main .panel .l-title {
   padding-bottom: 20px;
 }
-.mian-content .main .panel .l-title .section-title {
+.main-content .main .panel .l-title .section-title {
   font-size: 19px;
 }
-.mian-content .main .panel .main-item .card {
+.main-content .main .panel .main-item .card {
   padding: 10px 15px;
   margin: 10px 0;
   border: 0px solid rgba(0, 0, 0, 0.07);
   transition: all 0.5s;
 }
-.mian-content .main .panel .main-item .card:hover {
+.main-content .main .panel .main-item .card:hover {
   box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.3);
 }
-.mian-content .main .panel .main-item .card .card-head {
+.main-content .main .panel .main-item .card .card-head {
   margin-bottom: 10px;
 }
-.mian-content .main .panel .main-item .card .card-head .card-icon img {
+.main-content .main .panel .main-item .card .card-head .card-icon img {
   width: 40px;
   height: 40px;
   margin-right: 10px;
 }
-.mian-content .main .panel .main-item .card .card-head .card-title {
+.main-content .main .panel .main-item .card .card-head .card-title {
   font-size: 18px;
   line-height: 40px;
   font-weight: 400;
 }
-.mian-content .main .panel .main-item .card .card-body {
+.main-content .main .panel .main-item .card .card-body {
   padding: 0;
   font-size: 13px;
   color: #808080;
 }
-.mian-content .main .panel .main-item .card .card-body .tag {
+.main-content .main .panel .main-item .card .card-body .tag {
   font-size: 12px;
   padding: 1px 3px;
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   transition: all 0.3s;
 }
-.mian-content .main .panel .main-item .card .card-body .tag:hover {
+.main-content .main .panel .main-item .card .card-body .tag:hover {
   color: white;
   background-color: rgba(0, 0, 0, 0.3);
   border: none;
