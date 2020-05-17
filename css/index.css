@@ -204,6 +204,7 @@ a:focus {
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   transition: all 0.3s;
+  word-break: keep-all;
 }
 .main-content .main .panel .main-item .card .card-body .tag:hover {
   color: white;
