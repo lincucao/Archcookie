@@ -133,6 +133,21 @@ a:focus {
   box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
   height: 70px;
 }
+.main-content .nav .wechat {
+  position: relative;
+}
+.main-content .nav .wechat:hover img {
+  display: block;
+}
+.main-content .nav .wechat img {
+  width: 100px;
+  position: absolute;
+  left: -50%;
+  top: 55px;
+  z-index: 999;
+  display: none;
+  box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
+}
 .main-content .nav .nav-link {
   padding: 0 1rem;
 }

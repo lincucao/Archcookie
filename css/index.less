@@ -88,18 +88,20 @@ a:focus {
     .sidenav {
         display: none;
     }
+
     .main-content {
         padding-left: 0 !important;
     }
 }
+
 .sidenav {
     width: 240px;
     background: @baseColor;
     color: @sbColor;
     position: fixed;
     height: 100vh;
-    
-    
+
+
 
     // overflow: auto;
     // padding-top: 70px;
@@ -188,6 +190,24 @@ a:focus {
     .nav {
         box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
 
+        .wechat {
+            position: relative;
+
+            &:hover img {
+                display: block;
+            }
+
+            img {
+                width: 100px;
+                position: absolute;
+                left: -50%;
+                top: 55px;
+                z-index: 999;
+                display: none;
+                box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
+            }
+        }
+
         .nav-link {
             padding: 0 1rem;
         }
@@ -235,6 +255,7 @@ a:focus {
                     &:hover {
                         box-shadow: 0 0 35px 0 rgba(154, 161, 171, .3);
                     }
+
                     .card-head {
 
                         // height: 40px;
@@ -277,6 +298,7 @@ a:focus {
                             border: 1px solid rgba(0, 0, 0, .3);
                             // background-color: rgba(0, 0, 0, .3);
                             transition: all 0.3s;
+
                             &:hover {
                                 color: white;
                                 background-color: rgba(0, 0, 0, .3);
