@@ -90,7 +90,7 @@ a:focus {
 }
 .sidenav .side-menu {
   max-height: calc(100% - 320px);
-  height: calc(100% - 320px);
+  height: calc(100% - 325px);
   overflow: auto;
 }
 .sidenav .side-menu::-webkit-scrollbar {
