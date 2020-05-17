@@ -1,0 +1,298 @@
+// less 颜色声明
+@baseColor: #333a45;
+@sbColor: #8591A0;
+@gap: 20px;
+@lightColor: #98a6ad;
+
+.bTop {
+    border-top: 1px solid rgba(152, 166, 173, .2);
+}
+
+// 公共样式
+blockquote,
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+input,
+legend,
+li,
+ol,
+p,
+pre,
+td,
+textarea,
+th,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: @sbColor;
+}
+
+/*icon-font声明*/
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/iconfont.woff2') format('woff2'),
+        url('../font/iconfont.woff') format('woff'),
+        url('../font/iconfont.ttf') format('truetype'),
+        url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: sans-serif;
+    background: #F8F9FD;
+    font-weight: 1rem;
+
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+//内容样式
+.sidenav {
+    width: 240px;
+    background: @baseColor;
+    color: @sbColor;
+    position: fixed;
+    height: 100vh;
+
+    // overflow: auto;
+    // padding-top: 70px;
+    a:hover {
+        color: white;
+    }
+
+    // logo 
+    .logo {
+        // position: fixed;
+        top: 0;
+        line-height: 70px;
+        font-size: 30px;
+        color: white;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, .1);
+    }
+
+    //内容区域
+    .side-menu {
+        max-height: calc(100% - 320px);
+        height: calc(100% - 320px);
+        overflow: auto;
+        // border: 1px solid red;
+    }
+
+    .side-menu::-webkit-scrollbar {
+        display: none;
+    }
+
+    .side-item {
+
+        //单个菜单样式
+        li {
+            // border: 1px solid red;
+            padding: 10px 30px;
+
+            a {
+                font-size: 14px;
+            }
+
+            i {
+                margin-right: 10px;
+            }
+
+            span {
+                // border: 1px solid red;
+                float: right;
+                font-size: 10px;
+                vertical-align: middle;
+                // display: inline-block;
+                line-height: 26px;
+            }
+        }
+    }
+
+    //底部提交内容
+    .sub-info {
+        // border: 1px solid red;
+        // height: 250px;
+        color: white;
+        padding: 10px;
+        margin: 25px;
+        box-sizing: border-box;
+        background: rgba(255, 255, 255, .07);
+        border-radius: 5px;
+
+        img {
+            display: block;
+            margin: 0 auto;
+            height: 90px;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
+// main content 
+
+.mian-content {
+    padding-left: 240px;
+    padding-right: 0;
+
+    .nav {
+        box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
+
+        .nav-link {
+            padding: 0 1rem;
+        }
+
+        height: 70px;
+
+        // border: 1px solid red ;
+        li {
+            span {
+                display: inline-block;
+                font-size: 22px;
+                line-height: 70px;
+            }
+        }
+
+        ;
+    }
+
+    .main {
+        .panel {
+            margin-bottom: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 3px;
+            box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
+
+            .l-title {
+                padding-bottom: @gap;
+                // border-bottom: 1px solid #ccc;
+
+                .section-title {
+                    font-size: 19px;
+                }
+            }
+
+            .main-item {
+                .card {
+                    padding: 10px 15px;
+                    margin: 10px 0;
+                    border: 0px solid rgba(0, 0, 0, .07);
+                    transition: all 0.5s;
+
+                    &:hover {
+                        box-shadow: 0 0 35px 0 rgba(154, 161, 171, .3);
+                    }
+                    .card-head {
+
+                        // height: 40px;
+                        margin-bottom: 10px;
+
+
+                        // 卡片头部
+                        .card-icon {
+                            img {
+                                width: 40px;
+                                height: 40px;
+                                // border: 1px solid #ccc;
+                                // border-radius: 50%;
+                                margin-right: 10px;
+                            }
+                        }
+
+                        .card-title {
+                            font-size: 18px;
+                            line-height: 40px;
+                            font-weight: 400;
+
+
+                        }
+
+
+                    }
+
+                    .card-body {
+                        padding: 0;
+                        font-size: 13px;
+                        color: #808080;
+
+                        .tag {
+                            font-size: 12px;
+                            // position: absolute;
+                            // color: white;
+                            padding: 1px 3px;
+                            border-radius: 4px;
+                            border: 1px solid rgba(0, 0, 0, .3);
+                            // background-color: rgba(0, 0, 0, .3);
+                            transition: all 0.3s;
+                            &:hover {
+                                color: white;
+                                background-color: rgba(0, 0, 0, .3);
+                                border: none;
+
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+}
+
+footer {
+    padding-left: 240px;
+    .bTop();
+
+    .footer-info {
+        span {
+            color: @lightColor;
+        }
+
+        padding: 30px 20px;
+
+    }
+}

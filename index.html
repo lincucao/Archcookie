@@ -1,80 +1,503 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="zh-CN">
+
 <head>
-    <meta http-equiv="refresh" content="2">
+    <!-- <meta http-equiv="refresh" content="2"> -->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" />
     <title>建筑曲奇导航-建筑、城规、景观，致力为建筑人做最有用的建筑导航</title>
     <meta name="description" content="为建筑、景观、城规专业集合建筑业内资源，软件教程、建筑法规、建筑规范等内容，为建筑人提供一个便捷的上网入口">
     <meta name="keywords" content="建筑曲奇、建筑、景观、城规、建筑学院、建筑学、软件、建筑导航、sketchUp模型、软件教程">
     <!--css样式初始化-->
     <link rel="stylesheet" href="css/normalize.css">
-    <!--公共样式-->
-    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="lib/bootstrap-4.4/css/bootstrap.min.css">
     <!--首页样式-->
+    <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/index.css">
 
-
-    <!--PS：这是建筑曲奇导航的第一版，也在努力学习开发，可能不会太容易但希望一切顺利 by 林粗糙-->
-
+    <!--PS：这是建筑曲奇导航的第一版，可能不会太容易但希望一切顺利 by 林粗糙-->
 </head>
+
 <body>
-<!--siderBar start-->
-<aside class="menu">
-    <div class="menu-header">
-        <a href="https://weibo.com/u/7300640551">
-            <img src="images/logo.png" alt=""><span >建筑曲奇<br>archcookie</span>
-        </a>
-    </div>
-    <div class="menu-nav">
-        <div class="menu-list">
-        <ul class="siderbar-top">
-            <li>
-                <a href="#"><span class="iconfont">&#xe60b;</span>综合资讯</a>
-            </li>
-            <li>
-                <a href="#"><span class="iconfont">&#xe60b;</span>综合资讯</a>
-            </li>
-            <li>
-                <a href="#"><span class="iconfont">&#xe60b;</span>综合资讯</a>
-            </li>
-            <li>
-                <a href="#"><span class="iconfont">&#xe60b;</span>综合资讯</a>
-            </li>
-            <li>
-                <a href="#"><span class="iconfont">&#xe60b;</span>综合资讯</a>
-            </li>
-            <li>
-                <a href="#"><span class="iconfont">&#xe60b;</span>综合资讯</a>
-            </li>
+    <div class="wrapper">
+        <!---------------------------------sidebar-start--------------------------------->
+        <div class="sidenav">
+            <!-- logo区域 -->
+            <div class="logo">Archcookie</div>
+            <div class="side-menu">
+                <ul class="text-left side-item">
+                    <li>
+                        <a href="#section-1">
+                            <i class="iconfont">&#xe60b;</i>
+                            建筑类资讯
+                            <!-- <span class="iconfont">&#xe608;</span> -->
+                        </a></li>
+                    <li>
+                        <a href="#section-2">
+                        <i class="iconfont">&#xe60b;</i>
+                        设计社区
+                        <!-- <span class="iconfont">&#xe608;</span> -->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#section-3">
+                        <i class="iconfont">&#xe60b;</i>
+                        图片灵感
+                        <!-- <span class="iconfont">&#xe608;</span> -->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#section-4">
+                        <i class="iconfont">&#xe60b;</i>
+                        软件官网
+                        <!-- <span class="iconfont">&#xe608;</span> -->
+                        </a>
+                    </li>
+                    <!-- 折叠菜单 -->
+                    <li><a href="#infoSubmenu" class="dropdown" data-toggle="collapse" aria-expanded="false"><i
+                                class="iconfont">&#xe60b;</i>软件神器<span class="iconfont">&#xe608;</span></a>
+                        <ul id="infoSubmenu" class="collapse">
+                            <li><a href="#section-4">建筑软件官网</a></li>
+                            <li><a>色彩搭配</a></li>
+                            <li><a>办公神器</a></li>
+                            <li><a>这是子内容</a></li>
+                            <li><a>这是子内容</a></li>
+                            <li><a>这是子内容</a></li>
+                            <li><a>这是子内容</a></li>
+                            <li><a>这是子内容</a></li>
+                            <li><a>这是子内容</a></li>
+                            <li><a>这是子内容</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
 
+            </div>
+            <!-- 网址提交 -->
+            <div class="sub-info text-center">
+                <img src="images/help-icon.svg" alt="">
+                <div class="m-2">有推荐的网址可以在这里提交哦～</div>
+                <a href="https://support.qq.com/products/142750?" class="btn btn-outline-light ">提交网址</a>
+            </div>
 
-        </ul>
         </div>
+        <!---------------------------------sidebar-end--------------------------------->
+        <!---------------------------------content-start--------------------------------->
+        <!-- nav start -->
+        <main class="mian-content container-fluid">
+            <!-- nav start -->
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="iconfont">&#xe63e;</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="iconfont">&#xe62b;</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="iconfont">&#xe75c;</span></a>
+                </li>
+            </ul>
+            <!-- nav end -->
+            <!-- card start -->
+            <div class="main container-fluid">
+                <!-- senction-s  -->
+                <div id="section-1" class="panel">
+                    <div class="l-title">
+                        <span class="section-title">综合资讯</span>
+                    </div>
+                    <div class="row">
+                        <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="http://www.archcollege.com">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/archcollege.png" alt=""></span>
+                                        <span class="card-title">建筑学院</span>
+                                    </div>
+                                    <div class="card-body">
+                                        国内优秀建筑师社区，年轻建筑师成长平台
+                                    </div>
+                                </a>
 
-        <ul class="siderbar-bottom">
-            <li>
-                <a href="#"><span class="iconfont">&#xe630;</span>提交网址</a>
-            </li>
-            <li>
-                <a href="https://support.qq.com/products/142750?"><span class="iconfont">&#xe61a;</span>建议反馈</a>
-            </li>
-        </ul>
+                            </div>
 
+                        </div>
+                        <!-- card-e -->
+                          <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="http://www.archiposition.com/">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/archcollege.png" alt=""></span>
+                                        <span class="card-title">有方</span>
+                                    </div>
+                                    <div class="card-body">
+                                        高品质的建筑门户、专业的建筑媒体
+                                    </div>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <!-- card-e -->
+                          <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="https://www.gooood.cn/">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/archcollege.png" alt=""></span>
+                                        <span class="card-title">谷德</span>
+                                    </div>
+                                    <div class="card-body">
+                                        面向国内外的国内建筑媒体，建筑平台
+                                    </div>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <!-- card-e -->
+                          <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="https://mooool.com/">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/archcollege.png" alt=""></span>
+                                        <span class="card-title">木藕设计网</span>
+                                    </div>
+                                    <div class="card-body">
+                                        专业的景观在线媒体平台，聚焦景观设计行业
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- card-e -->
+                        <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="http://bbs.caup.net/">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/archcollege.png" alt=""></span>
+                                        <span class="card-title">国匠城</span>
+                                    </div>
+                                    <div class="card-body">
+                                        城规类建筑论坛，内容资讯丰富，开发了许多不错的小工具
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- card-e -->
+                          <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="http://www.ikuku.cn/">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/archcollege.png" alt=""></span>
+                                        <span class="card-title">在库言库</span>
+                                    </div>
+                                    <div class="card-body">
+                                        国内项目报道，正如其名可以算项目库，分类清晰
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- card-e -->
+                         <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="http://www.archdaily.com">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/archdaily.png" alt=""></span>
+                                        <span class="card-title">Archdaily
+                                            
+                                        </span>
+                                    </div>
+                                   
+                                    <div class="card-body">
+                                        国际知名的建筑类网站，高品质的项目与报道 
+                                        <a class="tag" href="http://www.archdaily.cn">中文版</a>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- card-e -->
+                           <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="https://www.dezeen.com/">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/archdaily.png" alt=""></span>
+                                        <span class="card-title">Dezeen
+                                            
+                                        </span>
+                                    </div>
+                                   
+                                    <div class="card-body">
+                                        在线的建筑杂志，国际知名设计媒体类平台，高品质报道
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- card-e -->
+                        <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="https://www.designboom.com/">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/archdaily.png" alt=""></span>
+                                        <span class="card-title">Designboom
+                                            
+                                        </span>
+                                    </div>
+                                   
+                                    <div class="card-body">
+                                        在线的建筑杂志，知名媒体类平台涵盖范围较广<a class="tag" href="http://www.designboom.cn/">中文版</a>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- card-e -->
+                        <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="https://design-milk.com/">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/archdaily.png" alt=""></span>
+                                        <span class="card-title">DesignMilk</span>
+                                    </div>
+                                   
+                                    <div class="card-body">
+                                        国外室内设计、家居设计、产品设计资讯集合
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- card-e -->
+
+                    </div>
+                </div>
+                <!-- senction -e  -->
+                <!-- senction-s  -->
+                <div id="section-2" class="panel">
+                    <div class="l-title">
+                        <span class="section-title">设计社区</span>
+                    </div>
+                    <div class="row">
+                        <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="https://www.zcool.com.cn/">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/archcollege.png" alt=""></span>
+                                        <span class="card-title">站酷</span>
+                                    </div>
+                                    <div class="card-body">
+                                        国内综合型的设计平台，高品质的设计内容，设计师的聚集地
+                                    </div>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <!-- card-e -->
+                          <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="https://www.behance.net/">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/archcollege.png" alt=""></span>
+                                        <span class="card-title">Behance</span>
+                                    </div>
+                                    <div class="card-body">
+                                        Adobe 旗下全球优秀设计师平台
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <!-- card-e -->
+                    </div>
+                </div>
+                <!-- senction -e  -->
+                <!-- senction-s  -->
+                <div id="section-3" class="panel">
+                    <div class="l-title">
+                        <span class="section-title">图片灵感</span>
+                    </div>
+                    <div class="row">
+                        <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="https://www.pinterest.com/">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/archcollege.png" alt=""></span>
+                                        <span class="card-title">Pinterest</span>
+                                    </div>
+                                    <div class="card-body">
+                                        全球知名的设计类网站
+                                    </div>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <!-- card-e -->
+                        <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="https://huaban.com/">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/archcollege.png" alt=""></span>
+                                        <span class="card-title">花瓣</span>
+                                    </div>
+                                    <div class="card-body">
+                                        参照pinterest 模式打造的国内图片瀑布流式网站
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <!-- card-e -->
+                        <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="https://www.bigbigwork.com/">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/archcollege.png" alt=""></span>
+                                        <span class="card-title">大作</span>
+                                    </div>
+                                    <div class="card-body">
+                                        通过技术解决大多数国外设计站点无法访问问题，部分功能付费
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <!-- card-e -->
+                    </div>
+                </div>
+                <!-- senction -e  -->
+                <!-- senction-s  -->
+                <div id="section-4" class="panel">
+                    <div class="l-title">
+                        <span class="section-title">软件官网</span>
+                    </div>
+                    <div class="row">
+                        <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="https://www.rhino3d.com/">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/archcollege.png" alt=""></span>
+                                        <span class="card-title">Rhino</span>
+                                    </div>
+                                    <div class="card-body">
+                                        3d建模软件，在建筑、工业设计、产品设计等领域应用广泛
+                                    </div>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <!-- card-e -->
+                        <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="https://www.sketchup.com/">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/archcollege.png" alt=""></span>
+                                        <span class="card-title">Sketchup</span>
+                                    </div>
+                                    <div class="card-body">
+                                        3D建模软件，在建筑室内等领域应用广泛，上手简单
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <!-- card-e -->
+                        <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="https://www.autodesk.com/">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/archcollege.png" alt=""></span>
+                                        <span class="card-title">Autodesk</span>
+                                    </div>
+                                    <div class="card-body">
+                                        知名设计领域软件开发商，CAD、Maya、Revit等皆出自该公司
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <!-- card-e -->
+                        <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="https://www.adobe.com/">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/archcollege.png" alt=""></span>
+                                        <span class="card-title">Adobe</span>
+                                    </div>
+                                    <div class="card-body">
+                                        PS、AI、ID、Pr、AE等众多创意软件开发公司
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- card-e -->
+                        <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="http://www.tangent.com.cn/">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/archcollege.png" alt=""></span>
+                                        <span class="card-title">天正</span>
+                                    </div>
+                                    <div class="card-body">
+                                        国内基于CAD开发的建筑类插件，大大提高建筑绘图效率
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- card-e -->
+                         <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="http://www.csxysoft.com/">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/archcollege.png" alt=""></span>
+                                        <span class="card-title">湘源控规</span>
+                                    </div>
+                                    <div class="card-body">
+                                        国内基于CAD开发的规划插件，规划领域应用较多
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- card-e -->
+                    </div>
+                </div>
+                <!-- senction -e  -->
+
+            </div>
+            <!-- card end -->
+
+        </main>
+        <footer>
+            <div class="container-fluid footer-info">
+                <span>2020 © 林粗糙 Archcookie.com </span>
+                <span>联系我</span>
+            </div>
+        </footer>
     </div>
-</aside>
-<!--siderBar end-->
-<!--container start-->
-<div class="container fl">
-    <!--header start-->
-    <div class="header">
-        <span class="iconfont">&#xe60b;</span>
-        <span class="iconfont">&#xe60b;</span>
-        <span class="iconfont">&#xe60b;</span>
-        <span class="iconfont">&#xe60b;</span>
-    </div>
-    <!--header start-->
-</div>
-<!--container end-->
+    <script src="lib/jquery-3.5/jquery-3.5.0.min.js"></script>
+    <!-- Production version -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="lib/bootstrap-4.4/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>
