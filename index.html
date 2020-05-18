@@ -18,6 +18,24 @@
     <link rel="stylesheet" href="css/index.css">
 
     <!--PS：这是建筑曲奇导航的第一版，可能不会太容易但希望一切顺利 by 林粗糙-->
+    <script>
+
+    function AddFavorite(sURL, sTitle) {
+        var sTitle = " ";                       //sTitle：添加到收藏夹中的网站页面标题名称。
+        var sURL = location.href;              //sURL：添加到收藏夹的完整网站页面地址
+        try {
+            window.external.addFavorite(sURL, sTitle);//IE浏览器
+        }
+        catch (e) {
+            try {
+                window.sidebar.addPanel(sTitle, sURL, "");//Firefox浏览器
+            }
+            catch (e) {
+                alert("加入收藏失败，请按下Ctrl+D进行添加");
+            }
+        }
+    }
+    </script>
 </head>
 
 <body>
@@ -117,7 +135,7 @@
                 </li>
                 <!-- <li class="">archcookie</li> -->
                 <li class="nav-item">
-                    <a href="javascript:;" οnclick="javascript:window.external.addFavorite('http://hao.archcookie.com','建筑曲奇导航')" title="收藏本站到收藏夹" style="line-height: 70px;">收藏本站</a>
+                    <a href="#" onclick="AddFavorite(window.location,document.title)" style="line-height: 70px;" >收藏本站</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link wechat" href="https://weibo.com/u/7300640551"><span class="iconfont">&#xe63e;</span></a>
