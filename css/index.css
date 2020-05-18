@@ -250,6 +250,7 @@ a:focus {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.15);
 }
 .right-menu a {
   line-height: 40px;
@@ -260,11 +261,11 @@ a:focus {
   margin-left: 50%;
   transform: translate(-50%);
 }
-.right-menu:hover {
-  background: #98a6ad;
-}
-.right-menu:hover i {
-  color: white;
+.right-menu span {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 5px;
 }
 footer {
   border-top: 1px solid rgba(152, 166, 173, 0.2);

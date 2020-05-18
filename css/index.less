@@ -359,6 +359,7 @@ a:focus {
         width: 40px;
         height: 40px;
         border-radius: 50%;
+        box-shadow: 0 0 35px 0 rgba(0, 0, 0, .15);
         a {
             line-height: 40px;
             margin: 0 auto;
@@ -368,12 +369,13 @@ a:focus {
                 transform: translate(-50%);
             }
         }
-        &:hover {
-            background: @lightColor;
-            i {
-                color: white;
-            }
+        span {
+            display: block;
+            font-size: 12px;
+            text-align: center;
+            padding-top: 5px;
         }
+       
 
     }
  // 底部信息
