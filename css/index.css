@@ -99,10 +99,19 @@ a:focus {
 .sidenav .logo {
   top: 0;
   line-height: 70px;
-  font-size: 30px;
+  font-size: 25px;
   color: white;
   text-align: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.sidenav .logo span {
+  font-size: 10px;
+  padding: 0 4px;
+  border-radius: 5px;
+  top: 0;
+  height: 10px;
+  background: #42b983;
+  margin-left: 3px;
 }
 .sidenav .hideSidebar {
   width: 40px;
