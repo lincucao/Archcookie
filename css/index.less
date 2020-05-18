@@ -86,8 +86,12 @@ a:focus {
 
 //自适应样式
 @media (max-width: 768px) {
+    .hideSidebar {
+        display: block!important;
+    }
     .sidenav {
-        margin-left: -240px;
+        margin-left: -300px;
+        
     }
 
     .main-content {
@@ -131,6 +135,19 @@ a:focus {
         color: white;
         text-align: center;
         border-bottom: 1px solid rgba(255, 255, 255, .1);
+    }
+    .hideSidebar {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 15px;
+        right: -50px;
+        z-index: 999;
+        background: #ccc;
+        text-align: center;
+        line-height: 40px;
+        font-size: 20px;
+        display: none;
     }
 
     //内容区域
