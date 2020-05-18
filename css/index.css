@@ -64,11 +64,19 @@ a:focus {
 }
 @media (max-width: 768px) {
   .sidenav {
-    display: none;
+    margin-left: -240px;
   }
   .main-content {
     padding-left: 0 !important;
   }
+}
+.sidebar-active {
+  margin-left: -240px;
+  transition: all 0.3s;
+}
+.main-active {
+  padding-left: 0 !important;
+  transition: all 0.3s;
 }
 .sidenav {
   width: 240px;
@@ -131,7 +139,13 @@ a:focus {
 }
 .main-content .nav {
   box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
+  position: relative;
   height: 70px;
+}
+.main-content .nav #menuToggle {
+  position: absolute;
+  left: 16px;
+  padding: 20px 0;
 }
 .main-content .nav .wechat {
   position: relative;

@@ -83,15 +83,26 @@ a:focus {
     transition: all 0.3s;
 }
 
-//内容样式
+//自适应样式
 @media (max-width: 768px) {
     .sidenav {
-        display: none;
+        margin-left: -240px;
     }
 
     .main-content {
         padding-left: 0 !important;
     }
+}
+
+// 点击事件样式
+.sidebar-active {
+    margin-left: -240px;
+    transition: all 0.3s;
+}
+
+.main-active {
+    padding-left: 0 !important;
+    transition: all 0.3s;
 }
 
 .sidenav {
@@ -100,6 +111,7 @@ a:focus {
     color: @sbColor;
     position: fixed;
     height: 100vh;
+
 
 
 
@@ -189,6 +201,14 @@ a:focus {
 
     .nav {
         box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
+        position: relative;
+
+        #menuToggle {
+            position: absolute;
+            left: 16px;
+            padding: 20px 0;
+
+        }
 
         .wechat {
             position: relative;
@@ -299,7 +319,7 @@ a:focus {
                             // background-color: rgba(0, 0, 0, .3);
                             transition: all 0.3s;
                             word-break: keep-all;
-                            
+
 
                             &:hover {
                                 color: white;

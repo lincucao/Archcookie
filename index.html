@@ -23,7 +23,7 @@
 <body>
     <div class="wrapper">
         <!---------------------------------sidebar-start--------------------------------->
-        <div class="sidenav">
+        <div class="sidenav" id="sidebar">
             <!-- logo区域 -->
             <div class="logo">Archcookie</div>
             <div class="side-menu" >
@@ -104,11 +104,12 @@
         <!---------------------------------sidebar-end--------------------------------->
         <!---------------------------------content-start--------------------------------->
         <!-- nav start -->
-        <main class="main-content container-fluid">
+        <main class="main-content container-fluid" id="mainContent">
             <!-- nav start -->
             <ul class="nav justify-content-end">
+                <li id="menuToggle"><a href="javascript:;" class="btn btn-light"><i class="fas fa-arrow-left"></i></a></li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://weibo.com/u/7300640551"><span class="iconfont">&#xe63e;</span></a>
+                    <a class="nav-link wechat" href="https://weibo.com/u/7300640551"><span class="iconfont">&#xe63e;</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link wechat" href="#"><span class="iconfont">&#xe62b;</span>
