@@ -77,6 +77,13 @@ a:focus {
   #menuToggle #sidebarCollapse {
     display: block;
   }
+  .side-menu {
+    max-height: calc(100% - 190px) !important;
+    height: calc(100% - 190px) !important;
+  }
+  .sub-info img {
+    display: none!important;
+  }
 }
 .sidebar-active {
   margin-left: 0;
