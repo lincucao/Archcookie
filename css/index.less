@@ -93,6 +93,10 @@ a:focus {
     .main-content {
         padding-left: 0 !important;
     }
+   #menuToggle #sidebarCollapse {
+        display: block;
+    }
+
 }
 
 // 点击事件样式
@@ -198,7 +202,6 @@ a:focus {
     .nav {
         box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
         position: relative;
-
         #menuToggle {
             position: absolute;
             left: 16px;
@@ -212,16 +215,8 @@ a:focus {
                 background-color: transparent;
                 padding: 0;
                 // background: none;
-                span {
-                    display: block;
-                    width: 80%;
-                    height: 2px;
-                    background: #555;
-                    margin: 5px auto;
-                    // border: 1px solid red;
-                    line-height: 0;
-
-                }
+                display: none;
+                
             }
             .btn-light:focus,
             button:focus {
@@ -352,18 +347,44 @@ a:focus {
         }
 
     }
+
 }
 
+// 回到顶部按钮
+    .right-menu {
+        position: fixed;
+        background: white;
+        right: 16px;
+        bottom: 80px ;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        a {
+            line-height: 40px;
+            margin: 0 auto;
+            display: block;
+            i {
+                margin-left: 50%;
+                transform: translate(-50%);
+            }
+        }
+        &:hover {
+            background: @lightColor;
+            i {
+                color: white;
+            }
+        }
 
+    }
+ // 底部信息
 footer {
     .bTop();
-
     .footer-info {
         span {
             color: @lightColor;
         }
 
-        padding: 30px 20px;
+        padding: 10px 20px;
 
     }
 }

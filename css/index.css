@@ -70,6 +70,9 @@ a:focus {
   .main-content {
     padding-left: 0 !important;
   }
+  #menuToggle #sidebarCollapse {
+    display: block;
+  }
 }
 .sidebar-active {
   margin-left: -240px;
@@ -154,14 +157,7 @@ a:focus {
   height: 100%;
   background-color: transparent;
   padding: 0;
-}
-.main-content .nav #menuToggle button span {
-  display: block;
-  width: 80%;
-  height: 2px;
-  background: #555;
-  margin: 5px auto;
-  line-height: 0;
+  display: none;
 }
 .main-content .nav #menuToggle .btn-light:focus,
 .main-content .nav #menuToggle button:focus {
@@ -246,11 +242,35 @@ a:focus {
   background-color: rgba(0, 0, 0, 0.3);
   border: none;
 }
+.right-menu {
+  position: fixed;
+  background: white;
+  right: 16px;
+  bottom: 80px ;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.right-menu a {
+  line-height: 40px;
+  margin: 0 auto;
+  display: block;
+}
+.right-menu a i {
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+.right-menu:hover {
+  background: #98a6ad;
+}
+.right-menu:hover i {
+  color: white;
+}
 footer {
   border-top: 1px solid rgba(152, 166, 173, 0.2);
 }
 footer .footer-info {
-  padding: 30px 20px;
+  padding: 10px 20px;
 }
 footer .footer-info span {
   color: #98a6ad;
