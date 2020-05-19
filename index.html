@@ -19,22 +19,19 @@
 
     <!--PS：这是建筑曲奇导航的第一版，可能不会太容易但希望一切顺利 by 林粗糙-->
     <script>
-
-    function AddFavorite(sURL, sTitle) {
-        var sTitle = " ";                       //sTitle：添加到收藏夹中的网站页面标题名称。
-        var sURL = location.href;              //sURL：添加到收藏夹的完整网站页面地址
-        try {
-            window.external.addFavorite(sURL, sTitle);//IE浏览器
-        }
-        catch (e) {
+        function AddFavorite(sURL, sTitle) {
+            var sTitle = " "; //sTitle：添加到收藏夹中的网站页面标题名称。
+            var sURL = location.href; //sURL：添加到收藏夹的完整网站页面地址
             try {
-                window.sidebar.addPanel(sTitle, sURL, "");//Firefox浏览器
-            }
-            catch (e) {
-                alert("加入收藏失败，请按下Ctrl+D进行添加");
+                window.external.addFavorite(sURL, sTitle); //IE浏览器
+            } catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, ""); //Firefox浏览器
+                } catch (e) {
+                    alert("加入收藏失败，请按下Ctrl+D进行添加");
+                }
             }
         }
-    }
     </script>
 </head>
 
@@ -46,7 +43,7 @@
             <div class="logo">Archcookie<span>Beta 0.1</span></div>
             <!-- 关闭按钮 -->
             <div class="hideSidebar"><i class="fas fa-times"></i></div>
-            <div class="side-menu" >
+            <div class="side-menu">
                 <ul class="text-left side-item">
                     <li>
                         <a href="#section-news">
@@ -64,30 +61,31 @@
                     </li>
                     <li>
                         <a href="#section-inspiration">
-                        <i class="fas fa-lightbulb"></i>
-                        图片灵感
-                        <!-- <span class="iconfont">&#xe608;</span> -->
+                            <i class="fas fa-lightbulb"></i>
+                            图片灵感
+                            <!-- <span class="iconfont">&#xe608;</span> -->
                         </a>
                     </li>
                     <li>
                         <a href="#section-map">
-                        <i class="fas fa-map-marked-alt"></i>
-                        地图工具
-                        <!-- <span class="iconfont">&#xe608;</span> -->
+                            <i class="fas fa-map-marked-alt"></i>
+                            地图工具
+                            <!-- <span class="iconfont">&#xe608;</span> -->
                         </a>
                     </li>
                     <li>
                         <a href="#section-draw">
-                        <i class="fas fa-road"></i>
-                        断面绘制工具
-                        <!-- <span class="iconfont">&#xe608;</span> -->
+                            <i class="fas fa-road"></i>
+                            断面绘制工具
+                            <!-- <span class="iconfont">&#xe608;</span> -->
                         </a>
                     </li>
-                    </li>
                     <!-- collapse-s-->
-                    <li><div href="#infoSubmenu" class="dropdown" data-toggle="collapse" aria-expanded="false">
-                        <i class="fas fa-tools"></i>
-                        软件神器<span class="iconfont">&#xe608;</span></div>
+                    <li>
+                        <div href="#infoSubmenu" class="dropdown" data-toggle="collapse" aria-expanded="false">
+                            <i class="fas fa-tools"></i>
+                            软件神器<span class="iconfont">&#xe608;</span>
+                        </div>
                         <ul id="infoSubmenu" class="collapse">
                             <li><a href="#section-tool">建筑软件官网</a></li>
                             <li><a href="#section-soft-render">渲染软件</a></li>
@@ -95,8 +93,9 @@
                     </li>
                     <!-- collapse-e-->
                     <!-- collapse-s-->
-                    <li><div href="#university" class="dropdown" data-toggle="collapse" aria-expanded="false">
-                        <i class="fas fa-university"></i>建筑院校<span class="iconfont">&#xe608;</span></div>
+                    <li>
+                        <div href="#university" class="dropdown" data-toggle="collapse" aria-expanded="false">
+                            <i class="fas fa-university"></i>建筑院校<span class="iconfont">&#xe608;</span></div>
                         <ul id="university" class="collapse">
                             <li><a href="#university-old8">老八校</a></li>
                             <li><a href="#university-new4">新四军</a></li>
@@ -105,34 +104,43 @@
                     </li>
                     <!-- collapse-e-->
                     <!-- collapse-s-->
-                    <li><div href="#company" class="dropdown" data-toggle="collapse" aria-expanded="false">
-                        <i class="fas fa-briefcase"></i>
-                        设计机构<span class="iconfont">&#xe608;</span></div>
+                    <li>
+                        <div href="#company" class="dropdown" data-toggle="collapse" aria-expanded="false">
+                            <i class="fas fa-briefcase"></i>
+                            设计机构<span class="iconfont">&#xe608;</span></div>
                         <ul id="company" class="collapse">
                             <li><a href="#section-tool">境内机构</a></li>
                             <li><a href="#">境外机构（暂空）</a></li>
                         </ul>
                     </li>
                     <!-- collapse-e-->
+                    <li>
+                        <a href="#section-job">
+                            <i class="fas fa-user-injured"></i>
+                            求职招聘
+                            <!-- <span class="iconfont">&#xe608;</span> -->
+                        </a>
+                    </li>
+                                        
                     <!-- collapse-s-->
-                    <li><div href="#course" class="dropdown" data-toggle="collapse" aria-expanded="false">
-                        <i class="fas fa-tools"></i>
-                        在线教程<span class="iconfont">&#xe608;</span></div>
+                    <li>
+                        <div href="#course" class="dropdown" data-toggle="collapse" aria-expanded="false">
+                            <i class="fas fa-tools"></i>
+                            在线教程<span class="iconfont">&#xe608;</span></div>
                         <ul id="course" class="collapse">
                             <li><a href="#course-free"> 免费教程 </a></li>
                             <li><a href="#course-open">在线公开课</a></li>
                         </ul>
                     </li>
                     <!-- collapse-e-->
-                    
                 </ul>
 
             </div>
             <!-- 网址提交 -->
             <div class="sub-info text-center">
                 <img src="images/help-icon.svg" alt="">
-                <div class="m-2">问题反馈及网址提交～</div>
-                <a href="https://support.qq.com/products/142750?" class="btn btn-outline-light ">提交网址</a>
+                <div class="m-2">推荐的网站点击下方按钮提交</div>
+                <a href="http://archcollege.mikecrm.com/06teAuh" class="btn btn-outline-light" target="_blank">提交网址</a>
             </div>
 
         </div>
@@ -143,29 +151,32 @@
             <!-- nav start -->
             <ul class="nav justify-content-end">
                 <li id="menuToggle">
-                    
-                    <button type="button" id="sidebarCollapse" class="btn btn-light"> 
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-light">
                         <i class="fas fa-bars"></i>
                     </button>
                 </li>
                 <!-- <li class="">archcookie</li> -->
                 <li class="nav-item">
-                    <a href="#" onclick="AddFavorite(window.location,document.title)" style="line-height: 70px;" >收藏本站</a>
+                    <a href="#" onclick="AddFavorite(window.location,document.title)"
+                        style="line-height: 70px;">收藏本站</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link wechat" href="#"><span class="iconfont">&#xe625;</span>
-                    <img src="images/like.JPG" alt="">
+                        <img src="images/like.JPG" alt="">
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link wechat" href="https://weibo.com/u/7300640551"><span class="iconfont">&#xe63e;</span></a>
+                    <a class="nav-link wechat" href="https://weibo.com/u/7300640551"><span
+                            class="iconfont">&#xe63e;</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link wechat" href="#"><span class="iconfont">&#xe62b;</span>
-                    <img src="images/wechat.png" alt=""></a>
+                        <img src="images/wechat.png" alt=""></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://space.bilibili.com/16179639"><span class="iconfont">&#xe75c;</span></a>
+                    <a class="nav-link" href="https://space.bilibili.com/16179639"><span
+                            class="iconfont">&#xe75c;</span></a>
                 </li>
             </ul>
             <!-- nav end -->
@@ -194,7 +205,7 @@
 
                         </div>
                         <!-- card-e -->
-                          <!-- card-s -->
+                        <!-- card-s -->
                         <div class="main-item col-sm-6 col-md-4 col-lg-3">
                             <div class="card">
                                 <a href="http://www.archiposition.com/">
@@ -211,7 +222,7 @@
 
                         </div>
                         <!-- card-e -->
-                          <!-- card-s -->
+                        <!-- card-s -->
                         <div class="main-item col-sm-6 col-md-4 col-lg-3">
                             <div class="card">
                                 <a href="https://www.gooood.cn/">
@@ -228,7 +239,7 @@
 
                         </div>
                         <!-- card-e -->
-                          <!-- card-s -->
+                        <!-- card-s -->
                         <div class="main-item col-sm-6 col-md-4 col-lg-3">
                             <div class="card">
                                 <a href="https://mooool.com/">
@@ -258,7 +269,7 @@
                             </div>
                         </div>
                         <!-- card-e -->
-                          <!-- card-s -->
+                        <!-- card-s -->
                         <div class="main-item col-sm-6 col-md-4 col-lg-3">
                             <div class="card">
                                 <a href="http://www.ikuku.cn/">
@@ -273,36 +284,36 @@
                             </div>
                         </div>
                         <!-- card-e -->
-                         <!-- card-s -->
+                        <!-- card-s -->
                         <div class="main-item col-sm-6 col-md-4 col-lg-3">
                             <div class="card">
                                 <a href="http://www.archdaily.com">
                                     <div class="card-head">
                                         <span class="card-icon"><img src="images/logo/archdaily.png" alt=""></span>
                                         <span class="card-title">Archdaily
-                                            
+
                                         </span>
                                     </div>
-                                   
+
                                     <div class="card-body">
-                                        国际知名的建筑类网站，高品质的项目与报道 
+                                        国际知名的建筑类网站，高品质的项目与报道
                                         <a class="tag" href="http://www.archdaily.cn">中文版</a>
                                     </div>
                                 </a>
                             </div>
                         </div>
                         <!-- card-e -->
-                           <!-- card-s -->
+                        <!-- card-s -->
                         <div class="main-item col-sm-6 col-md-4 col-lg-3">
                             <div class="card">
                                 <a href="https://www.dezeen.com/">
                                     <div class="card-head">
                                         <span class="card-icon"><img src="images/logo/dezeen.png" alt=""></span>
                                         <span class="card-title">Dezeen
-                                            
+
                                         </span>
                                     </div>
-                                   
+
                                     <div class="card-body">
                                         在线的建筑杂志，国际知名设计媒体类平台，高品质报道
                                     </div>
@@ -317,10 +328,10 @@
                                     <div class="card-head">
                                         <span class="card-icon"><img src="images/logo/designboom.png" alt=""></span>
                                         <span class="card-title">Designboom
-                                            
+
                                         </span>
                                     </div>
-                                   
+
                                     <div class="card-body">
                                         在线的建筑杂志，知名媒体类平台涵盖范围较广<a class="tag" href="http://www.designboom.cn/">中文版</a>
                                     </div>
@@ -336,7 +347,7 @@
                                         <span class="card-icon"><img src="images/logo/designmilk.png" alt=""></span>
                                         <span class="card-title">DesignMilk</span>
                                     </div>
-                                   
+
                                     <div class="card-body">
                                         国外室内设计、家居设计、产品设计资讯集合
                                     </div>
@@ -371,7 +382,7 @@
 
                         </div>
                         <!-- card-e -->
-                          <!-- card-s -->
+                        <!-- card-s -->
                         <div class="main-item col-sm-6 col-md-4 col-lg-3">
                             <div class="card">
                                 <a href="https://www.behance.net/">
@@ -463,7 +474,7 @@
                                         <span class="card-title">百度个性地图编辑器</span>
                                     </div>
                                     <div class="card-body">
-                                        
+
                                     </div>
                                 </a>
 
@@ -533,7 +544,7 @@
                     </div>
                 </div>
                 <!-- senction -e  -->
-                                <!-- senction-s  -->
+                <!-- senction-s  -->
                 <div id="section-draw" class="panel">
                     <div class="l-title">
                         <span class="section-title">断面绘制工具</span>
@@ -544,7 +555,8 @@
                             <div class="card">
                                 <a href="https://streetmix.net/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/streetmix.png" alt="baidulogo"></span>
+                                        <span class="card-icon"><img src="images/logo/streetmix.png"
+                                                alt="baidulogo"></span>
                                         <span class="card-title">streetMix</span>
                                     </div>
                                     <div class="card-body">
@@ -659,7 +671,7 @@
                             </div>
                         </div>
                         <!-- card-e -->
-                         <!-- card-s -->
+                        <!-- card-s -->
                         <div class="main-item col-sm-6 col-md-4 col-lg-3">
                             <div class="card">
                                 <a href="http://www.csxysoft.com/">
@@ -688,7 +700,8 @@
                             <div class="card">
                                 <a href="http://www.vectorarchitects.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/vectorarchitects.png" alt=""></span>
+                                        <span class="card-icon"><img src="images/logo/vectorarchitects.png"
+                                                alt=""></span>
                                         <span class="card-title">直向建筑</span>
                                     </div>
                                     <div class="card-body">
@@ -736,7 +749,8 @@
                             <div class="card">
                                 <a href="http://www.standardarchitecture.cn/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/standardarchitecture.png" alt=""></span>
+                                        <span class="card-icon"><img src="images/logo/standardarchitecture.png"
+                                                alt=""></span>
                                         <span class="card-title">标准营造</span>
                                     </div>
                                     <div class="card-body">
@@ -796,7 +810,8 @@
                             <div class="card">
                                 <a href="http://www.scenicarchitecture.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/scenicarchitecture.png" alt=""></span>
+                                        <span class="card-icon"><img src="images/logo/scenicarchitecture.png"
+                                                alt=""></span>
                                         <span class="card-title">山水秀</span>
                                     </div>
                                     <div class="card-body">
@@ -836,7 +851,7 @@
                             </div>
                         </div>
                         <!-- card-e -->
-                         <!-- card-s -->
+                        <!-- card-s -->
                         <div class="main-item col-sm-6 col-md-4 col-lg-3">
                             <div class="card">
                                 <a href="http://www.ztsla.com/">
@@ -851,7 +866,7 @@
                             </div>
                         </div>
                         <!-- card-e -->
-                         <!-- card-s -->
+                        <!-- card-s -->
                         <div class="main-item col-sm-6 col-md-4 col-lg-3">
                             <div class="card">
                                 <a href="https://www.turenscape.com/">
@@ -866,12 +881,13 @@
                             </div>
                         </div>
                         <!-- card-e -->
-                         <!-- card-s -->
+                        <!-- card-s -->
                         <div class="main-item col-sm-6 col-md-4 col-lg-3">
                             <div class="card">
                                 <a href="http://www.deshaus.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/atelier-deshaus.png" alt=""></span>
+                                        <span class="card-icon"><img src="images/logo/atelier-deshaus.png"
+                                                alt=""></span>
                                         <span class="card-title">大舍建筑</span>
                                     </div>
                                     <div class="card-body">
@@ -881,7 +897,7 @@
                             </div>
                         </div>
                         <!-- card-e -->
-                         <!-- card-s -->
+                        <!-- card-s -->
                         <div class="main-item col-sm-6 col-md-4 col-lg-3">
                             <div class="card">
                                 <a href="http://www.goa.com.cn/">
@@ -895,7 +911,65 @@
                                 </a>
                             </div>
                         </div>
-                     <!-- card-e -->
+                        <!-- card-e -->
+                    </div>
+                </div>
+                <!-- senction -e  -->
+                <!-- senction-s  -->
+                <div id="section-job" class="panel">
+                    <div class="l-title">
+                        <span class="section-title">求职招聘</span>
+                    </div>
+                    <div class="row">
+                        <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="https://www.gooood.cn/category/jobs">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/gooood.png" alt=""></span>
+                                        <span class="card-title">谷德招聘</span>
+                                    </div>
+                                    <div class="card-body">
+                                    </div>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <!-- card-e -->
+                        <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="http://www.archiposition.com/category/2">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/archiposition.png" alt=""></span>
+                                        <span class="card-title">有方招聘</span>
+                                    </div>
+                                    <div class="card-body">
+
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <!-- card-e -->
+                        <!-- card-s -->
+                        <div class="main-item col-sm-6 col-md-4 col-lg-3">
+                            <div class="card">
+                                <a href="http://www.buildhr.com/">
+                                    <div class="card-head">
+                                        <span class="card-icon"><img src="images/logo/buildhr.png" alt=""></span>
+                                        <span class="card-title">建筑英才</span>
+                                    </div>
+                                    <div class="card-body">
+
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <!-- card-e -->
+
                     </div>
                 </div>
                 <!-- senction -e  -->
@@ -930,7 +1004,7 @@
                                         <span class="card-title">V-Ray</span>
                                     </div>
                                     <div class="card-body">
-                                        
+
                                     </div>
                                 </a>
 
@@ -946,14 +1020,14 @@
                                         <span class="card-title">lumion</span>
                                     </div>
                                     <div class="card-body">
-                                        
+
                                     </div>
                                 </a>
 
                             </div>
                         </div>
                         <!-- card-e -->
-                        
+
                     </div>
                 </div>
                 <!-- senction -e  -->
@@ -988,7 +1062,7 @@
                                         <span class="card-title">天津大学</span>
                                     </div>
                                     <div class="card-body">
-                                        
+
                                     </div>
                                 </a>
 
@@ -1004,7 +1078,7 @@
                                         <span class="card-title">东南大学</span>
                                     </div>
                                     <div class="card-body">
-                                        
+
                                     </div>
                                 </a>
                             </div>
@@ -1019,7 +1093,7 @@
                                         <span class="card-title">同济大学</span>
                                     </div>
                                     <div class="card-body">
-                                        
+
                                     </div>
                                 </a>
                             </div>
@@ -1034,7 +1108,7 @@
                                         <span class="card-title">哈尔滨工业大学</span>
                                     </div>
                                     <div class="card-body">
-                                        
+
                                     </div>
                                 </a>
                             </div>
@@ -1049,7 +1123,7 @@
                                         <span class="card-title">华南理工大学</span>
                                     </div>
                                     <div class="card-body">
-                                        
+
                                     </div>
                                 </a>
                             </div>
@@ -1064,7 +1138,7 @@
                                         <span class="card-title">重庆大学</span>
                                     </div>
                                     <div class="card-body">
-                                        
+
                                     </div>
                                 </a>
                             </div>
@@ -1079,13 +1153,13 @@
                                         <span class="card-title">西安建筑科技大学</span>
                                     </div>
                                     <div class="card-body">
-                                        
+
                                     </div>
                                 </a>
                             </div>
                         </div>
                         <!-- card-e -->
-                        
+
                     </div>
                 </div>
                 <!-- senction -e  -->
@@ -1120,7 +1194,7 @@
                                         <span class="card-title">浙江大学</span>
                                     </div>
                                     <div class="card-body">
-                                        
+
                                     </div>
                                 </a>
 
@@ -1136,7 +1210,7 @@
                                         <span class="card-title">湖南大学</span>
                                     </div>
                                     <div class="card-body">
-                                        
+
                                     </div>
                                 </a>
                             </div>
@@ -1151,13 +1225,13 @@
                                         <span class="card-title">沈阳建筑大学</span>
                                     </div>
                                     <div class="card-body">
-                                        
+
                                     </div>
                                 </a>
                             </div>
                         </div>
                         <!-- card-e -->
-                        
+
                     </div>
                 </div>
                 <!-- senction -e  -->
@@ -1192,7 +1266,7 @@
                                         <span class="card-title">优优教程网</span>
                                     </div>
                                     <div class="card-body">
-                                        
+
                                     </div>
                                 </a>
 
@@ -1208,14 +1282,14 @@
                                         <span class="card-title">bilibili</span>
                                     </div>
                                     <div class="card-body">
-                                        
+
                                     </div>
                                 </a>
 
                             </div>
                         </div>
                         <!-- card-e -->
-                        
+
                     </div>
                 </div>
                 <!-- senction -e  -->
@@ -1250,7 +1324,7 @@
                                         <span class="card-title">腾讯课堂</span>
                                     </div>
                                     <div class="card-body">
-                                        
+
                                     </div>
                                 </a>
 
@@ -1263,25 +1337,33 @@
 
             </div>
             <!-- card end -->
-        <!-- right-menu -->
-         <div class="right-menu">
-             <a href="#">
-                 <i class="fas fa-chevron-up"></i>
-            </a>
-            <span class="small">顶部</span>
-        
-        </div>
+            <!-- right-menu -->
+            <div class="right-menu">
+                <div class="feedback">
+                    <a href="https://support.qq.com/products/142750?">
+                        <i class="fas fa-bug"></i>
+                    </a>
+                    <span class="small">反馈</span>
+                </div>
+                <div class="top">
+                    <a href="#">
+                        <i class="fas fa-chevron-up"></i>
+                    </a>
+                    <span class="small">顶部</span>
+                </div>
 
-         <footer>
-            <div class="container-fluid footer-info text-center">
-                <span>2020 © 林粗糙 Archcookie.com </span>
             </div>
-        </footer>
+
+            <footer>
+                <div class="container-fluid footer-info text-center">
+                    <span>2020 © 林粗糙 Archcookie.com </span>
+                </div>
+            </footer>
 
         </main>
-        
-        
-        
+
+
+
     </div>
     <script src="lib/jquery-3.5/jquery-3.5.0.min.js"></script>
     <!-- Production version -->

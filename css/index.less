@@ -396,27 +396,32 @@ a:focus {
 // 回到顶部按钮
     .right-menu {
         position: fixed;
-        background: white;
         right: 16px;
-        bottom: 80px ;
+        bottom: 160px ;
         width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        box-shadow: 0 0 35px 0 rgba(0, 0, 0, .15);
-        a {
+
+
+        .feedback a,
+        .top a{
             line-height: 40px;
             margin: 0 auto;
             display: block;
+            border-radius: 50%;
+            box-shadow: 0 0 35px 0 rgba(0, 0, 0, .15);
             i {
                 margin-left: 50%;
                 transform: translate(-50%);
             }
         }
         span {
+            // position: absolute;
+            // left: -50%;
+            // transform: translate(50%);
             display: block;
             font-size: 12px;
             text-align: center;
             padding-top: 5px;
+            word-break: keep-all;
         }
        
 

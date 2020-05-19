@@ -282,20 +282,20 @@ a:focus {
 }
 .right-menu {
   position: fixed;
-  background: white;
   right: 16px;
-  bottom: 80px ;
+  bottom: 160px ;
   width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.15);
 }
-.right-menu a {
+.right-menu .feedback a,
+.right-menu .top a {
   line-height: 40px;
   margin: 0 auto;
   display: block;
+  border-radius: 50%;
+  box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.15);
 }
-.right-menu a i {
+.right-menu .feedback a i,
+.right-menu .top a i {
   margin-left: 50%;
   transform: translate(-50%);
 }
@@ -304,6 +304,7 @@ a:focus {
   font-size: 12px;
   text-align: center;
   padding-top: 5px;
+  word-break: keep-all;
 }
 footer {
   border-top: 1px solid rgba(152, 166, 173, 0.2);
