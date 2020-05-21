@@ -16,6 +16,14 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/index.css">
+    <!-- js库引入 -->
+    <script src="lib/jquery-3.5/jquery-3.5.0.min.js"></script>
+    <!-- Production version -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="lib/bootstrap-4.4/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/lozad.min.js"></script>
+    
 
     <!--PS：这是建筑曲奇导航的第一版，可能不会太容易但希望一切顺利 by 林粗糙-->
     <script>
@@ -187,7 +195,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link wechat" href="#"><span class="iconfont">&#xe625;</span>
-                        <img src="images/like.JPG" alt="">
+                        <img class="lozad" data-src="images/like.jpg" />
                     </a>
                 </li>
                 <li class="nav-item">
@@ -196,7 +204,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link wechat" href="#"><span class="iconfont">&#xe62b;</span>
-                        <img src="images/wechat.png" alt=""></a>
+                    <img class="lozad" data-src="images/wechat.png"/>
+                    </a>
+                                                
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://space.bilibili.com/16179639"><span
@@ -217,7 +227,7 @@
                             <div class="card">
                                 <a href="http://www.archcollege.com">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/archcollege.png" alt=""></span>
+                                        <span class="card-icon"><img class="lozad" data-src="images/logo/archcollege.png" alt="建筑学院的logo"/></span>
                                         <span class="card-title">建筑学院</span>
                                     </div>
                                     <div class="card-body">
@@ -234,7 +244,7 @@
                             <div class="card">
                                 <a href="http://www.archiposition.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/archiposition.png" alt=""></span>
+                                        <span class="card-icon"><img class="lozad" data-src="images/logo/archiposition.png" alt="有方建筑的logo"/></span>
                                         <span class="card-title">有方</span>
                                     </div>
                                     <div class="card-body">
@@ -251,7 +261,7 @@
                             <div class="card">
                                 <a href="https://www.gooood.cn/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/gooood.png" alt=""></span>
+                                        <span class="card-icon"><img class="lozad" data-src="images/logo/gooood.png" alt="谷德网的logo"/></span>
                                         <span class="card-title">谷德</span>
                                     </div>
                                     <div class="card-body">
@@ -268,7 +278,8 @@
                             <div class="card">
                                 <a href="https://mooool.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/mooool.png" alt=""></span>
+                                        <span class="card-icon"><img class="lozad" data-src="images/logo/mooool.png" alt="木藕设计网的logo"/>
+                                        </span>
                                         <span class="card-title">木藕设计网</span>
                                     </div>
                                     <div class="card-body">
@@ -283,7 +294,7 @@
                             <div class="card">
                                 <a href="http://bbs.caup.net/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/caup.png" alt=""></span>
+                                        <span class="card-icon"><img class="lozad" data-src="images/logo/caup.png" alt="国匠城的logo"/></span>
                                         <span class="card-title">国匠城</span>
                                     </div>
                                     <div class="card-body">
@@ -298,7 +309,7 @@
                             <div class="card">
                                 <a href="http://www.ikuku.cn/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/ikuku.png" alt=""></span>
+                                        <span class="card-icon"><img class="lozad" data-src="images/logo/ikuku.png" alt="在库言库的logo"/></span>
                                         <span class="card-title">在库言库</span>
                                     </div>
                                     <div class="card-body">
@@ -313,7 +324,7 @@
                             <div class="card">
                                 <a href="http://www.archdaily.com">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/archdaily.png" alt=""></span>
+                                        <span class="card-icon"><img class="lozad" data-src="images/logo/archdaily.png" alt="Archdaily的logo"/></span>
                                         <span class="card-title">Archdaily
 
                                         </span>
@@ -332,7 +343,9 @@
                             <div class="card">
                                 <a href="https://www.dezeen.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/dezeen.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/dezeen.png" alt="Dezeen的logo"/>
+                                        </span>
                                         <span class="card-title">Dezeen
 
                                         </span>
@@ -350,10 +363,10 @@
                             <div class="card">
                                 <a href="https://www.designboom.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/designboom.png" alt=""></span>
-                                        <span class="card-title">Designboom
-
+                                        <span class="card-icon">
+                                             <img class="lozad" data-src="images/logo/designboom.png" alt="Designboom的logo"/>
                                         </span>
+                                        <span class="card-title">Designboom</span>
                                     </div>
 
                                     <div class="card-body">
@@ -368,7 +381,9 @@
                             <div class="card">
                                 <a href="https://design-milk.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/designmilk.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/designmilk.png" alt="DesignMilk的logo"/>
+                                        </span>
                                         <span class="card-title">DesignMilk</span>
                                     </div>
 
@@ -394,7 +409,9 @@
                             <div class="card">
                                 <a href="https://www.zcool.com.cn/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/zcool.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/zcool.png" alt="站酷的logo"/>
+                                        </span>
                                         <span class="card-title">站酷</span>
                                     </div>
                                     <div class="card-body">
@@ -411,7 +428,9 @@
                             <div class="card">
                                 <a href="https://www.behance.net/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/behance.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/behance.png" alt="Behance的logo"/>
+                                        </span>
                                         <span class="card-title">Behance</span>
                                     </div>
                                     <div class="card-body">
@@ -436,7 +455,9 @@
                             <div class="card">
                                 <a href="https://www.pinterest.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/pinterest.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/pinterest.png" alt="Pinterest的logo"/>
+                                        </span>
                                         <span class="card-title">Pinterest</span>
                                     </div>
                                     <div class="card-body">
@@ -453,7 +474,9 @@
                             <div class="card">
                                 <a href="https://huaban.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/huaban.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/huaban.png" alt="花瓣的logo"/>
+                                        </span>
                                         <span class="card-title">花瓣</span>
                                     </div>
                                     <div class="card-body">
@@ -469,7 +492,9 @@
                             <div class="card">
                                 <a href="https://www.bigbigwork.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/bigbigwork.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/bigbigwork.png" alt="大作网的logo"/>
+                                        </span>
                                         <span class="card-title">大作</span>
                                     </div>
                                     <div class="card-body">
@@ -494,11 +519,12 @@
                             <div class="card">
                                 <a href="https://www.pinterest.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/baidu.png" alt="baidulogo"></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/baidu.png" alt="百度的logo"/>
+                                        </span>
                                         <span class="card-title">百度个性地图编辑器</span>
                                     </div>
                                     <div class="card-body">
-
                                     </div>
                                 </a>
 
@@ -511,7 +537,9 @@
                             <div class="card">
                                 <a href="https://www.openstreetmap.org/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/openstreetmap.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/openstreetmap.png" alt="OpenStreetMap的logo"/>
+                                        </span>
                                         <span class="card-title">OpenStreetMap</span>
                                     </div>
                                     <div class="card-body">
@@ -526,7 +554,9 @@
                             <div class="card">
                                 <a href="http://www.arcgis.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/arcgis.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/arcgis.png" alt="arcgis的logo"/>
+                                        </span>
                                         <span class="card-title">arcgis</span>
                                     </div>
                                     <div class="card-body">
@@ -540,7 +570,9 @@
                             <div class="card">
                                 <a href="http://datav.aliyun.com/tools/atlas/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/datav.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/datav.png" alt="Datav的logo"/>
+                                        </span>
                                         <span class="card-title">Datav</span>
                                     </div>
                                     <div class="card-body">
@@ -555,7 +587,9 @@
                             <div class="card">
                                 <a href="http://mapstack.stamen.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/mapstack.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/mapstack.png" alt="MapStack的logo"/>
+                                        </span>
                                         <span class="card-title">MapStack</span>
                                     </div>
                                     <div class="card-body">
@@ -579,8 +613,9 @@
                             <div class="card">
                                 <a href="https://streetmix.net/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/streetmix.png"
-                                                alt="baidulogo"></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/streetmix.png" alt="streetMix的logo"/>
+                                            </span>
                                         <span class="card-title">streetMix</span>
                                     </div>
                                     <div class="card-body">
@@ -597,7 +632,9 @@
                             <div class="card">
                                 <a href="https://usdm.upc.gov.ae/USDM/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/usdm.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/usdm.png" alt="USDM的logo"/>
+                                        </span>
                                         <span class="card-title">USDM</span>
                                     </div>
                                     <div class="card-body">
@@ -622,7 +659,9 @@
                             <div class="card">
                                 <a href="https://www.rhino3d.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/rhino.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/rhino.png" alt="Rhino的logo"/>
+                                        </span>
                                         <span class="card-title">Rhino</span>
                                     </div>
                                     <div class="card-body">
@@ -638,7 +677,9 @@
                             <div class="card">
                                 <a href="https://www.sketchup.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/sketchup.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/sketchup.png" alt="Sketchup的logo"/>
+                                        </span>
                                         <span class="card-title">Sketchup</span>
                                     </div>
                                     <div class="card-body">
@@ -654,7 +695,9 @@
                             <div class="card">
                                 <a href="https://www.autodesk.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/autodesk.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/autodesk.png"  alt="Autodesk的logo"/>
+                                        </span>
                                         <span class="card-title">Autodesk</span>
                                     </div>
                                     <div class="card-body">
@@ -670,7 +713,8 @@
                             <div class="card">
                                 <a href="https://www.adobe.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/adobe.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/adobe.png" alt="Adobe的logo"></span>
                                         <span class="card-title">Adobe</span>
                                     </div>
                                     <div class="card-body">
@@ -685,7 +729,9 @@
                             <div class="card">
                                 <a href="http://www.tangent.com.cn/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/tangent.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/tangent.png" alt="天正logo">
+                                        </span>
                                         <span class="card-title">天正</span>
                                     </div>
                                     <div class="card-body">
@@ -700,7 +746,9 @@
                             <div class="card">
                                 <a href="http://www.csxysoft.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/csxysoft.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/csxysoft.png" alt="湘源控规logo">
+                                        </span>
                                         <span class="card-title">湘源控规</span>
                                     </div>
                                     <div class="card-body">
@@ -724,7 +772,9 @@
                             <div class="card">
                                 <a href="http://www.sublog.net/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/sublog.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/sublog.png" alt="紫天的博客logo">
+                                        </span>
                                         <span class="card-title">紫天的博客</span>
                                     </div>
                                     <div class="card-body">
@@ -740,7 +790,9 @@
                             <div class="card">
                                 <a href="http://www.piziku.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/piziku.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/piziku.png" alt="柸子库logo">
+                                        </span>
                                         <span class="card-title">柸子库</span>
                                     </div>
                                     <div class="card-body">
@@ -756,7 +808,9 @@
                             <div class="card">
                                 <a href="http://www.suapp.me/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/suapp.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/suapp.png" alt="SUAPPlogo">
+                                        </span>
                                         <span class="card-title">SUAPP</span>
                                     </div>
                                     <div class="card-body">
@@ -772,7 +826,9 @@
                             <div class="card">
                                 <a href="https://www.food4rhino.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/grasshopper.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/grasshopper.png" alt="food4Rhin logo">
+                                        </span>
                                         <span class="card-title">food4Rhino</span>
                                     </div>
                                     <div class="card-body">
@@ -796,7 +852,9 @@
                             <div class="card">
                                 <a href="https://www.enscape3d.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/enscape.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/enscape.png" alt="Enscape logo">
+                                        </span>
                                         <span class="card-title">Enscape</span>
                                     </div>
                                     <div class="card-body">
@@ -812,7 +870,9 @@
                             <div class="card">
                                 <a href="https://www.chaosgroup.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/vray.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/vray.png" alt="V-Ray logo">
+                                        </span>
                                         <span class="card-title">V-Ray</span>
                                     </div>
                                     <div class="card-body">
@@ -828,7 +888,9 @@
                             <div class="card">
                                 <a href="https://lumion.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/lumion.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/lumion.png" alt="lumion logo">
+                                        </span>
                                         <span class="card-title">lumion</span>
                                     </div>
                                     <div class="card-body">
@@ -854,7 +916,9 @@
                             <div class="card">
                                 <a href="https://smallpdf.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/smallpdf.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/smallpdf.png" alt="smallPDF logo">
+                                        </span>
                                         <span class="card-title">smallPDF</span>
                                     </div>
                                     <div class="card-body">
@@ -871,7 +935,9 @@
                             <div class="card">
                                 <a href="https://www.pdfconverter.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/pdfconverter.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/pdfconverter.png" alt="PDFconverter logo">
+                                        </span>
                                         <span class="card-title">PDFconverter</span>
                                     </div>
                                     <div class="card-body">
@@ -888,7 +954,9 @@
                             <div class="card">
                                 <a href="https://convertio.co/zh/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/convertio.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/convertio.png" alt="Convertio logo">
+                                        </span>
                                         <span class="card-title">Convertio</span>
                                     </div>
                                     <div class="card-body">
@@ -914,8 +982,9 @@
                             <div class="card">
                                 <a href="http://www.vectorarchitects.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/vectorarchitects.png"
-                                                alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/vectorarchitects.png" alt="直向建筑 logo">
+                                            </span>
                                         <span class="card-title">直向建筑</span>
                                     </div>
                                     <div class="card-body">
@@ -932,7 +1001,9 @@
                             <div class="card">
                                 <a href="http://www.fcjz.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/fcjz.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/fcjz.png" alt="非常建筑 logo">
+                                        </span>
                                         <span class="card-title">非常建筑</span>
                                     </div>
                                     <div class="card-body">
@@ -948,7 +1019,9 @@
                             <div class="card">
                                 <a href="http://www.azlarchitects.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/azlarchitects.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/azlarchitects.png" alt="张雷联合事务所 logo">
+                                        </span>
                                         <span class="card-title">张雷联合事务所</span>
                                     </div>
                                     <div class="card-body">
@@ -963,8 +1036,9 @@
                             <div class="card">
                                 <a href="http://www.standardarchitecture.cn/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/standardarchitecture.png"
-                                                alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/standardarchitecture.png" alt="标准营造 logo">
+                                            </span>
                                         <span class="card-title">标准营造</span>
                                     </div>
                                     <div class="card-body">
@@ -979,7 +1053,9 @@
                             <div class="card">
                                 <a href="http://www.urbanus.com.cn/home/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/urbanus.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/urbanus.png" alt="都市实践 logo">
+                                        </span>
                                         <span class="card-title">都市实践</span>
                                     </div>
                                     <div class="card-body">
@@ -994,7 +1070,9 @@
                             <div class="card">
                                 <a href="http://www.i-mad.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/i-mad.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/i-mad.png" alt="MAD logo">
+                                        </span>
                                         <span class="card-title">MAD</span>
                                     </div>
                                     <div class="card-body">
@@ -1009,7 +1087,9 @@
                             <div class="card">
                                 <a href="http://www.madaspam.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/madaspam.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/madaspam.png" alt="马达思班 logo">
+                                        </span>
                                         <span class="card-title">马达思班</span>
                                     </div>
                                     <div class="card-body">
@@ -1024,8 +1104,8 @@
                             <div class="card">
                                 <a href="http://www.scenicarchitecture.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/scenicarchitecture.png"
-                                                alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/scenicarchitecture.png" alt="山水秀 logo"></span>
                                         <span class="card-title">山水秀</span>
                                     </div>
                                     <div class="card-body">
@@ -1040,7 +1120,9 @@
                             <div class="card">
                                 <a href="http://www.jiakun.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/jiakun.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/jiakun.png" alt="家琨建筑设计事务所 logo">
+                                        </span>
                                         <span class="card-title">家琨建筑设计事务所</span>
                                     </div>
                                     <div class="card-body">
@@ -1055,7 +1137,9 @@
                             <div class="card">
                                 <a href="https://cadri.cn/cn/team/detail/15">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/lixinggan.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/lixinggan.png" alt="李兴钢建筑工作室 logo">
+                                        </span>
                                         <span class="card-title">李兴钢建筑工作室</span>
                                     </div>
                                     <div class="card-body">
@@ -1070,7 +1154,9 @@
                             <div class="card">
                                 <a href="http://www.ztsla.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/ztsla.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/ztsla.png" alt="张唐景观 logo">
+                                        </span>
                                         <span class="card-title">张唐景观</span>
                                     </div>
                                     <div class="card-body">
@@ -1085,7 +1171,9 @@
                             <div class="card">
                                 <a href="https://www.turenscape.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/turenscape.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/turenscape.png" alt="土人设计 logo">
+                                        </span>
                                         <span class="card-title">土人设计</span>
                                     </div>
                                     <div class="card-body">
@@ -1100,8 +1188,8 @@
                             <div class="card">
                                 <a href="http://www.deshaus.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/atelier-deshaus.png"
-                                                alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/atelier-deshaus.png" alt="大舍建筑 logo"></span>
                                         <span class="card-title">大舍建筑</span>
                                     </div>
                                     <div class="card-body">
@@ -1116,7 +1204,9 @@
                             <div class="card">
                                 <a href="http://www.goa.com.cn/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/goa.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/goa.png" alt="goa大象设计 logo">
+                                        </span>
                                         <span class="card-title">goa大象设计</span>
                                     </div>
                                     <div class="card-body">
@@ -1140,7 +1230,9 @@
                             <div class="card">
                                 <a href="https://www.mir.no/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/mir.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/mir.png" alt="mir logo">
+                                        </span>
                                         <span class="card-title">Mir.</span>
                                     </div>
                                     <div class="card-body">
@@ -1157,7 +1249,8 @@
                             <div class="card">
                                 <a href="http://www.sanlabcn.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/san.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/san.png" alt="SAN logo"></span>
                                         <span class="card-title">SAN</span>
                                     </div>
                                     <div class="card-body">
@@ -1174,7 +1267,9 @@
                             <div class="card">
                                 <a href="https://arqui9.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/arqui9.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/arqui9.png" alt="Arqui9 logo">
+                                        </span>
                                         <span class="card-title">Arqui9</span>
                                     </div>
                                     <div class="card-body">
@@ -1201,7 +1296,9 @@
                             <div class="card">
                                 <a href="https://www.gooood.cn/category/jobs">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/gooood.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/gooood.png" alt="谷德招聘 logo">
+                                        </span>
                                         <span class="card-title">谷德招聘</span>
                                     </div>
                                     <div class="card-body">
@@ -1217,7 +1314,9 @@
                             <div class="card">
                                 <a href="http://www.archiposition.com/category/2">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/archiposition.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/archiposition.png" alt="有方招聘 logo">
+                                        </span>
                                         <span class="card-title">有方招聘</span>
                                     </div>
                                     <div class="card-body">
@@ -1233,7 +1332,9 @@
                             <div class="card">
                                 <a href="http://www.buildhr.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/buildhr.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/buildhr.png" alt="建筑英才 logo">
+                                        </span>
                                         <span class="card-title">建筑英才</span>
                                     </div>
                                     <div class="card-body">
@@ -1260,7 +1361,8 @@
                             <div class="card">
                                 <a href="http://www.arch.tsinghua.edu.cn/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/tsinghua.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/tsinghua.png" alt="清华大学 校徽"></span>
                                         <span class="card-title">清华大学</span>
                                     </div>
                                     <div class="card-body">
@@ -1276,7 +1378,9 @@
                             <div class="card">
                                 <a href="http://arch.tju.edu.cn/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/tju.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/tju.png" alt="天津大学校徽">
+                                        </span>
                                         <span class="card-title">天津大学</span>
                                     </div>
                                     <div class="card-body">
@@ -1292,7 +1396,9 @@
                             <div class="card">
                                 <a href="https://arch.seu.edu.cn/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/seu.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/seu.png" alt="东南大学 校徽">
+                                        </span>
                                         <span class="card-title">东南大学</span>
                                     </div>
                                     <div class="card-body">
@@ -1307,7 +1413,9 @@
                             <div class="card">
                                 <a href="https://caup.tongji.edu.cn/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/tongji.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/tongji.png" alt="同济大学校徽">
+                                        </span>
                                         <span class="card-title">同济大学</span>
                                     </div>
                                     <div class="card-body">
@@ -1322,7 +1430,9 @@
                             <div class="card">
                                 <a href="http://jzxy.hit.edu.cn/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/hit.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/hit.png" alt="哈尔滨工业大学校徽">
+                                        </span>
                                         <span class="card-title">哈尔滨工业大学</span>
                                     </div>
                                     <div class="card-body">
@@ -1337,7 +1447,9 @@
                             <div class="card">
                                 <a href="http://www2.scut.edu.cn/architecture/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/scut.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/scut.png" alt="华南理工大学">
+                                        </span>
                                         <span class="card-title">华南理工大学</span>
                                     </div>
                                     <div class="card-body">
@@ -1352,7 +1464,9 @@
                             <div class="card">
                                 <a href="http://chongjian.cqu.edu.cn/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/chongqing.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/chongqing.png" alt="重庆大学校徽">
+                                        </span>
                                         <span class="card-title">重庆大学</span>
                                     </div>
                                     <div class="card-body">
@@ -1367,7 +1481,9 @@
                             <div class="card">
                                 <a href="http://www.xauat.edu.cn/zh-cn/index.php">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/xauat.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/xauat.png" alt="西安建筑科技大学校徽">
+                                        </span>
                                         <span class="card-title">西安建筑科技大学</span>
                                     </div>
                                     <div class="card-body">
@@ -1392,7 +1508,9 @@
                             <div class="card">
                                 <a href="https://arch.nju.edu.cn/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/nju.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/nju.png" alt="南京大学校徽">
+                                        </span>
                                         <span class="card-title">南京大学</span>
                                     </div>
                                     <div class="card-body">
@@ -1408,7 +1526,9 @@
                             <div class="card">
                                 <a href="http://www.ccea.zju.edu.cn/ts/list.htm">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/zju.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/zju.png" alt="浙江大学校徽">
+                                        </span>
                                         <span class="card-title">浙江大学</span>
                                     </div>
                                     <div class="card-body">
@@ -1424,7 +1544,9 @@
                             <div class="card">
                                 <a href="http://arch.hnu.edu.cn/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/hnu.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/hnu.png" alt="湖南大学校徽">
+                                        </span>
                                         <span class="card-title">湖南大学</span>
                                     </div>
                                     <div class="card-body">
@@ -1439,7 +1561,9 @@
                             <div class="card">
                                 <a href="http://jz.sjzu.edu.cn/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/sjzu.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/sjzu.png" alt="沈阳建筑大学校徽">
+                                        </span>
                                         <span class="card-title">沈阳建筑大学</span>
                                     </div>
                                     <div class="card-body">
@@ -1464,7 +1588,9 @@
                             <div class="card">
                                 <a href="http://gen.lib.rus.ec/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/libgen.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/libgen.png" alt="LibGen logo">
+                                        </span>
                                         <span class="card-title">LibGen</span>
                                     </div>
                                     <div class="card-body">
@@ -1481,7 +1607,9 @@
                             <div class="card">
                                 <a href="https://www.jiumodiary.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/jiumodiary.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/jiumodiary.png" alt="鸠摩搜书logo">
+                                        </span>
                                         <span class="card-title">鸠摩搜书</span>
                                     </div>
                                     <div class="card-body">
@@ -1497,7 +1625,9 @@
                             <div class="card">
                                 <a href="https://shuge.org/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/shuge.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/shuge.png" alt="书格 logo">
+                                        </span>
                                         <span class="card-title">书格</span>
                                     </div>
                                     <div class="card-body">
@@ -1521,7 +1651,9 @@
                             <div class="card">
                                 <a href="http://www.nlc.cn/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/nlc.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/nlc.png" alt="国家数字图书馆 logo">
+                                        </span>
                                         <span class="card-title">国家数字图书馆</span>
                                     </div>
                                     <div class="card-body">
@@ -1537,7 +1669,9 @@
                             <div class="card">
                                 <a href="http://www.ucdrs.superlib.net/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/ucdrs.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/ucdrs.png" alt="全国图书馆咨询联盟 logo">
+                                        </span>
                                         <span class="card-title">全国图书馆咨询联盟</span>
                                     </div>
                                     <div class="card-body">
@@ -1562,7 +1696,9 @@
                             <div class="card">
                                 <a href="https://www.doyoudo.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/doyoudo.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/doyoudo.png" alt="Doyoudo logo">
+                                        </span>
                                         <span class="card-title">Doyoudo</span>
                                     </div>
                                     <div class="card-body">
@@ -1578,7 +1714,9 @@
                             <div class="card">
                                 <a href="https://uiiiuiii.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/uiiiuiii.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/uiiiuiii.png" alt="优优教程网logo">
+                                        </span>
                                         <span class="card-title">优优教程网</span>
                                     </div>
                                     <div class="card-body">
@@ -1594,7 +1732,9 @@
                             <div class="card">
                                 <a href="https://www.bilibili.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/bilibili.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/bilibili.png" alt="哔哩哔哩 logo">
+                                        </span>
                                         <span class="card-title">bilibili</span>
                                     </div>
                                     <div class="card-body">
@@ -1620,7 +1760,9 @@
                             <div class="card">
                                 <a href="https://open.163.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/163.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/163.png" alt="网易公开课logo">
+                                        </span>
                                         <span class="card-title">网易公开课</span>
                                     </div>
                                     <div class="card-body">
@@ -1636,7 +1778,9 @@
                             <div class="card">
                                 <a href="https://ke.qq.com/">
                                     <div class="card-head">
-                                        <span class="card-icon"><img src="images/logo/keqq.png" alt=""></span>
+                                        <span class="card-icon">
+                                            <img class="lozad" data-src="images/logo/keqq.png" alt="腾讯课堂 logo">
+                                        </span>
                                         <span class="card-title">腾讯课堂</span>
                                     </div>
                                     <div class="card-body">
@@ -1682,11 +1826,10 @@
 
 
     </div>
-    <script src="lib/jquery-3.5/jquery-3.5.0.min.js"></script>
-    <!-- Production version -->
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
-    <script src="lib/bootstrap-4.4/js/bootstrap.min.js"></script>
-    <script src="js/index.js"></script>
+<script>
+    const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+    observer.observe();
+</script>
 </body>
 
 </html>

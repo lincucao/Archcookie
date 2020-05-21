@@ -283,7 +283,7 @@ a:focus {
 .right-menu {
   position: fixed;
   right: 16px;
-  bottom: 160px ;
+  bottom: 70px ;
   width: 40px;
 }
 .right-menu .feedback a,
