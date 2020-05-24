@@ -50,26 +50,6 @@ a:hover {
 }
 
 /*icon-font声明*/
-@font-face {
-    font-family: 'iconfont';
-    /* project id 1746711 */
-    src: url('//at.alicdn.com/t/font_1746711_uqlb3d6fqq.eot');
-    src: url('//at.alicdn.com/t/font_1746711_uqlb3d6fqq.eot?#iefix') format('embedded-opentype'),
-        url('//at.alicdn.com/t/font_1746711_uqlb3d6fqq.woff2') format('woff2'),
-        url('//at.alicdn.com/t/font_1746711_uqlb3d6fqq.woff') format('woff'),
-        url('//at.alicdn.com/t/font_1746711_uqlb3d6fqq.ttf') format('truetype'),
-        url('//at.alicdn.com/t/font_1746711_uqlb3d6fqq.svg#iconfont') format('svg');
-}
-
-
-.iconfont {
-    font-family: "iconfont" !important;
-    font-size: 16px;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 body {
     font-family: sans-serif;
     background: #F8F9FD;
@@ -89,6 +69,10 @@ a:focus {
 @media (max-width: 768px) {
     .hideSidebar {
         display: block!important;
+        .iconfont {
+           font-size: 26px;
+        }
+
     }
     .sidenav {
         margin-left: -300px;
@@ -134,6 +118,9 @@ a:focus {
     color: @sbColor;
     position: fixed;
     height: 100vh;
+    li {
+        cursor: pointer;
+    }
 
     a:hover {
         color: white;
@@ -193,13 +180,17 @@ a:focus {
         li {
             // border: 1px solid red;
             padding: 10px 30px;
-
-            a {
-                font-size: 14px;
-            }
-
             i {
                 margin-right: 10px;
+            }
+            ul {
+                li { 
+                    // padding-left: 5px;
+                    a {
+                        padding-left: 10px;
+                        font-size: 14px;
+                    }
+                }
             }
 
             span {
@@ -251,6 +242,7 @@ a:focus {
             width: 40px;
             height: 40px;
             // background: red;
+
             top: 15px;
             button {
                 width: 100%;
@@ -259,6 +251,10 @@ a:focus {
                 padding: 0;
                 // background: none;
                 display: none;
+                .iconfont {
+                    font-size: 18px !important;
+                    font-weight: 700;
+                }
                 
             }
             .btn-light:focus,
@@ -408,9 +404,9 @@ a:focus {
             display: block;
             border-radius: 50%;
             box-shadow: 0 0 35px 0 rgba(0, 0, 0, .15);
+            text-align: center;
             i {
-                margin-left: 50%;
-                transform: translate(-50%);
+                font-size: 18px;
             }
         }
         span {

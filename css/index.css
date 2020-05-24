@@ -39,19 +39,6 @@ a:hover {
   color: #8591A0;
 }
 /*icon-font声明*/
-@font-face {
-  font-family: 'iconfont';
-  /* project id 1746711 */
-  src: url('//at.alicdn.com/t/font_1746711_uqlb3d6fqq.eot');
-  src: url('//at.alicdn.com/t/font_1746711_uqlb3d6fqq.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_1746711_uqlb3d6fqq.woff2') format('woff2'), url('//at.alicdn.com/t/font_1746711_uqlb3d6fqq.woff') format('woff'), url('//at.alicdn.com/t/font_1746711_uqlb3d6fqq.ttf') format('truetype'), url('//at.alicdn.com/t/font_1746711_uqlb3d6fqq.svg#iconfont') format('svg');
-}
-.iconfont {
-  font-family: "iconfont" !important;
-  font-size: 16px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 body {
   font-family: sans-serif;
   background: #F8F9FD;
@@ -67,6 +54,9 @@ a:focus {
 @media (max-width: 768px) {
   .hideSidebar {
     display: block!important;
+  }
+  .hideSidebar .iconfont {
+    font-size: 26px;
   }
   .sidenav {
     margin-left: -300px;
@@ -103,6 +93,9 @@ a:focus {
   color: #8591A0;
   position: fixed;
   height: 100vh;
+}
+.sidenav li {
+  cursor: pointer;
 }
 .sidenav a:hover {
   color: white;
@@ -149,11 +142,12 @@ a:focus {
 .sidenav .side-item li {
   padding: 10px 30px;
 }
-.sidenav .side-item li a {
-  font-size: 14px;
-}
 .sidenav .side-item li i {
   margin-right: 10px;
+}
+.sidenav .side-item li ul li a {
+  padding-left: 10px;
+  font-size: 14px;
 }
 .sidenav .side-item li span {
   float: right;
@@ -196,6 +190,10 @@ a:focus {
   background-color: transparent;
   padding: 0;
   display: none;
+}
+.main-content .nav #menuToggle button .iconfont {
+  font-size: 18px !important;
+  font-weight: 700;
 }
 .main-content .nav #menuToggle .btn-light:focus,
 .main-content .nav #menuToggle button:focus {
@@ -293,11 +291,11 @@ a:focus {
   display: block;
   border-radius: 50%;
   box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.15);
+  text-align: center;
 }
 .right-menu .feedback a i,
 .right-menu .top a i {
-  margin-left: 50%;
-  transform: translate(-50%);
+  font-size: 18px;
 }
 .right-menu span {
   display: block;
